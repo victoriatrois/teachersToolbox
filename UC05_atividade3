@@ -1,0 +1,22 @@
+Atividade 3 
+
+Etapa 4 
+
+Contexto 
+Concluído o projeto e montado o projeto de banco de dados, imagine melhorias no banco e planeje rotinas de manutenção e administração para a base criada na etapa anterior. 
+
+Atividade 
+	• Utilizando o banco de dados criado na etapa anterior, siga estas orientações:  
+	• Ajuste questões de segurança, incluindo usuários, papéis e permissões. 
+	• Crie visões no banco de dados para consultas mais frequentes. 
+	• Crie ao menos uma stored function, um stored procedure ou um trigger para o banco de dados, selecionando uma funcionalidade que seja adequada para tanto. 
+	• Crie ao menos um índice composto para uma das tabelas. 
+	• Descreva textualmente uma rotina de administração de banco de dados, prevendo backups, restore e checagem de integridade periódica. 
+	• Por fim, reúna os scripts e os documentos de texto gerados em uma pasta compactada (.zip, .rar, 7z). 
+  
+Entrega 
+Entregue o arquivo compactado (.zip, .rar, 7z), com os documentos produzidos, no local destinado para tal, até a data indicada no cronograma de estudos. 
+
+Avaliação 
+Nesta atividade, você será avaliado no indicador: 
+Apresenta os resultados do Projeto Integrador com coerência, coesão e criatividade, propondo soluções inovadoras, a partir da visão crítica da atuação profissional no segmento. 

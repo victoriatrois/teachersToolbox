@@ -6,7 +6,7 @@ Contexto
 Após elaborar o projeto do sistema, foi requisitado um projeto de banco de dados para o sistema planejado na etapa anterior. Sendo assim, você precisará articular os conhecimentos que aprendeu para montar um plano por meio do diagrama de relacionamento de entidades (ER), do mapa de dados e da implementação das tabelas com povoamento inicial. 
 
 Atividade 
-	•Para realizar esta atividade, siga estas orientações:  
+Para realizar esta atividade, siga estas orientações:  
 	•Revise o projeto de software elaborado na etapa anterior e, baseado nele, extraia as entidades e os relacionamentos presentes no sistema. Elabore um diagrama ER com base nessas informações. 
 	•Elabore também, em um documento de texto (.doc, .docx ou .pdf), um dicionário de dados para o seu projeto de software, a partir da estrutura prevista no diagrama ER. 
 	•Crie um banco de dados usando SQL e implante-o. Crie as tabelas necessárias, com seus relacionamentos, e guarde os scripts para entrega. 

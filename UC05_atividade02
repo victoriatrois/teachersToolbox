@@ -1,0 +1,22 @@
+Atividade 2 
+
+Etapas 2 e 3 
+
+Contexto 
+Após elaborar o projeto do sistema, foi requisitado um projeto de banco de dados para o sistema planejado na etapa anterior. Sendo assim, você precisará articular os conhecimentos que aprendeu para montar um plano por meio do diagrama de relacionamento de entidades (ER), do mapa de dados e da implementação das tabelas com povoamento inicial. 
+
+Atividade 
+Para realizar esta atividade, siga estas orientações:  
+	•Revise o projeto de software elaborado na etapa anterior e, baseado nele, extraia as entidades e os relacionamentos presentes no sistema. Elabore um diagrama ER com base nessas informações. 
+	•Elabore também, em um documento de texto (.doc, .docx ou .pdf), um dicionário de dados para o seu projeto de software, a partir da estrutura prevista no diagrama ER. 
+	•Crie um banco de dados usando SQL e implante-o. Crie as tabelas necessárias, com seus relacionamentos, e guarde os scripts para entrega. 
+	•Crie script de povoamento de banco de dados, incluindo dados em todas as tabelas criadas. Guarde os scripts para entrega. 
+	•Por fim, reúna todo o material produzido (1. imagem do diagrama ER, 2. documento de dicionário de dados e 3. scripts SQL – structured query language) em uma pasta compactada (.zip, .rar, 7z). 
+
+Entrega 
+Entregue a pasta compactada (.zip, .rar, 7z), com os documentos produzidos, no local destinado para tal, até a data indicada no cronograma de estudos.  
+
+Avaliação 
+Nesta atividade, você será avaliado nos indicadores: 
+Adota estratégias que evidenciam as Marcas Formativas Senac na resolução dos desafios apresentados. 
+Elabora síntese do Projeto Integrador, respondendo às especificações do tema gerador. 

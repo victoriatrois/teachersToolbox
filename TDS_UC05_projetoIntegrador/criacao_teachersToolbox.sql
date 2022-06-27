@@ -44,7 +44,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `teachersToolbox`.`MATERIAL` (
   `materialID` INT NOT NULL AUTO_INCREMENT,
   `materialTitulo` VARCHAR(100) NULL,
-  `materialDescricao` VARCHAR(250) NULL,
+  `materialDescricao` VARCHAR(400) NULL,
   `dataPostagem` DATETIME NULL,
   `competenciaID` INT NULL,
   `habilidadeID` INT NULL,
@@ -62,19 +62,19 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `teachersToolbox`.`CADASTRO` (
   `idCADASTRO` INT NOT NULL AUTO_INCREMENT,
-  `data_nascimento` DATE NOT NULL,
+  `dataNascimento` DATE NOT NULL,
   `CPF` CHAR(11) NOT NULL,
   `email` VARCHAR(50) NOT NULL,
-  `telefone` VARCHAR(45) NOT NULL,
   `usuarioID` INT NOT NULL,
   PRIMARY KEY (`idCADASTRO`, `usuarioID`),
   UNIQUE INDEX `CPF_UNIQUE` (`CPF` ASC) VISIBLE,
   UNIQUE INDEX `Email_UNIQUE` (`email` ASC) VISIBLE,
-  UNIQUE INDEX `telefone_UNIQUE` (`telefone` ASC) VISIBLE,
   INDEX `usuarioID` (`usuarioID` ASC) VISIBLE,
   CONSTRAINT `usuarioID`
     FOREIGN KEY (`usuarioID`)
-    REFERENCES `teachersToolbox`.`USUARIO` (`usuarioID`))
+    REFERENCES `teachersToolbox`.`USUARIO` (`usuarioID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
@@ -95,6 +95,7 @@ CREATE TABLE IF NOT EXISTS `teachersToolbox`.`ENDERECO` (
   `enderecoID` INT NOT NULL AUTO_INCREMENT,
   `logradouro` VARCHAR(100) NULL,
   `numero` INT NULL,
+  `complemento` VARCHAR(25) NULL,
   `bairro` VARCHAR(50) NULL,
   `CEP` CHAR(8) NULL,
   `cidade` VARCHAR(50) NULL,
@@ -108,8 +109,10 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `teachersToolbox`.`HABILIDADE` (
   `habilidadeID` INT NOT NULL AUTO_INCREMENT,
-  `habilidadeNome` VARCHAR(45) NULL,
-  PRIMARY KEY (`habilidadeID`))
+  `habilidadeCodigo` CHAR(8) NULL,
+  `habilidadeDescricao` VARCHAR(400) NULL,
+  PRIMARY KEY (`habilidadeID`),
+  UNIQUE INDEX `habilidadeCodigo_UNIQUE` (`habilidadeCodigo` ASC) VISIBLE)
 ENGINE = InnoDB;
 
 
@@ -118,9 +121,10 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `teachersToolbox`.`COMPETENCIA` (
   `competenciaID` INT NOT NULL AUTO_INCREMENT,
-  `competenciaNome` VARCHAR(45) NULL,
+  `competenciaDescricao` VARCHAR(400) NULL,
   PRIMARY KEY (`competenciaID`))
 ENGINE = InnoDB;
+
 
 
 -- -----------------------------------------------------
@@ -205,7 +209,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `teachersToolbox`.`ROLE` (
   `roleID` INT NOT NULL AUTO_INCREMENT,
   `roleNome` VARCHAR(30) NULL,
-  `roleDescricao` VARCHAR(50) NULL,
+  `roleDescricao` VARCHAR(300) NULL,
   PRIMARY KEY (`roleID`))
 ENGINE = InnoDB;
 

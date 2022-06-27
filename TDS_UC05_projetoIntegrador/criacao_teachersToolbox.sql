@@ -22,9 +22,10 @@ USE `teachersToolbox` ;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `teachersToolbox`.`USUARIO` (
   `usuarioID` INT NOT NULL AUTO_INCREMENT,
-  `nome` VARCHAR(45) NULL,
-  `ultimoNome` VARCHAR(45) NULL,
-  PRIMARY KEY (`usuarioID`))
+  `login` VARCHAR(45) NOT NULL,
+  `senha` VARBINARY(100) NOT NULL,
+  PRIMARY KEY (`usuarioID`),
+  UNIQUE INDEX `login_UNIQUE` (`login` ASC))
 ENGINE = InnoDB;
 
 
@@ -62,14 +63,16 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `teachersToolbox`.`CADASTRO` (
   `idCADASTRO` INT NOT NULL AUTO_INCREMENT,
+  `usuarioNome` VARCHAR(45) NOT NULL,
+  `usuarioUltimoNome` VARCHAR(45) NOT NULL,
   `dataNascimento` DATE NOT NULL,
   `CPF` CHAR(11) NOT NULL,
   `email` VARCHAR(50) NOT NULL,
   `usuarioID` INT NOT NULL,
   PRIMARY KEY (`idCADASTRO`, `usuarioID`),
-  UNIQUE INDEX `CPF_UNIQUE` (`CPF` ASC) VISIBLE,
-  UNIQUE INDEX `Email_UNIQUE` (`email` ASC) VISIBLE,
-  INDEX `usuarioID` (`usuarioID` ASC) VISIBLE,
+  UNIQUE INDEX `CPF_UNIQUE` (`CPF` ASC),
+  UNIQUE INDEX `Email_UNIQUE` (`email` ASC),
+  INDEX `usuarioID` (`usuarioID` ASC),
   CONSTRAINT `usuarioID`
     FOREIGN KEY (`usuarioID`)
     REFERENCES `teachersToolbox`.`USUARIO` (`usuarioID`)
